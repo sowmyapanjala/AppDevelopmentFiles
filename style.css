@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(77, 207, 224);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 5em;
+}
+button{
+    background-color: burlywood;
+    color: black;
+    padding: 10px 10px 10px 10px;
+}
+button:hover{
+    background-color: black;
+    color: burlywood;
+}
+span {
+    color: #ffeb99;
+}

@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Module </title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h2>Arrays in JS</h2>
+        <p id='firstName'>
+            User name:
+        </p>
+
+        <p>Input Array:
+            <span id="inputDisplay"></span>
+        </p>
+
+        <p>Output Array:
+            <span id="outputDisplay"></span>
+        </p>
+
+        <button onclick="multiplyFun(10)">Multiply by 10</button>
+        <button onclick="multiplyFun(5)">Multiply by 5</button><br>
+        <button onclick="add(10)">Addition of 10</button>
+        <button onclick="add(5)">Addition of 5</button><br>
+        <button onclick="sub(10)">Subtraction of 10</button>
+        <button onclick="sub(5)">Subtraction of 5</button><br>
+        <button onclick="div(10)">Division of 10</button>
+        <button onclick="div(5)">Division of 5</button><br>
+        <button onclick="exp(2)">Squaring with 2</button>
+        <button onclick="exp(3)">Squaring with 3</button><br>
+       
+        <script>
+        var arr1=[1,2,3,4,5];
+        var arr2;
+
+        var user = { 
+
+            "postOwner": {
+
+                "firstName": "sandy",
+                "lastName": "goud",
+                "age": 28,
+                "isIndian": true
+
+            },
+
+            "likedUser" : {
+                "firstName": "Sowmya",
+                "lastName": "goud",
+                "age": 20,
+                "isIndian": false,
+            }
+        
+        }
+        document.getElementById('firstName').innerHTML += user.likedUser['firstName']
+
+        document.getElementById('inputDisplay').innerHTML = arr1;
+
+        arr2 = arr1.map(param1 =>  param1 * 1)
+
+        document.getElementById('outputDisplay').innerHTML = arr2;
+
+        function multiplyFun(Num){
+            arr2 = arr2.map(param1 => param1 * Num)
+            document.getElementById('outputDisplay').innerHTML = arr2;
+        }
+
+        function add(Num)
+        {
+            arr2 = arr2.map(param1 => param1 + Num)
+            document.getElementById('outputDisplay').innerHTML = arr2;
+        }
+
+        function sub(Num)
+        {
+            arr2 = arr2.map(param1 => param1 - Num)
+            document.getElementById('outputDisplay').innerHTML = arr2;
+        }
+
+        function div(Num)
+        {
+            arr2 = arr2.map(param1 => param1 / Num)
+            document.getElementById('outputDisplay').innerHTML = arr2;
+        }
+
+        function exp(Num)
+        {
+            arr2 = arr2.map(param1 => param1 * Num *Num)
+            document.getElementById('outputDisplay').innerHTML = arr2;
+        }
+
+    </script>
+    </body>
+</html>
